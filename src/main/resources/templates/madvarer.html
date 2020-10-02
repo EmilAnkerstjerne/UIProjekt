@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>TWEETER</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="blue-background">
+	<div class="container">
+		<div class="row">
+			<div class="col col-border">
+				<div class="form1-container">
+					<form id="registration-form" action="/postMadvare" method="post">
+						<label for="madvare">Madvare: </label>
+						<input type="text" id="madvare" name="madvare"><br><br>
+						<label for="udloeb">Udloeb: </label>
+						<input type="text" id="udloeb" name="udloeb"><br><br>
+						<label for="pris">Pris: </label>
+						<input type="text" id="pris" name="pris"><br><br>
+						<label for="tlfnr">Tlf.nr</label>
+						<input type="text" id="tlfnr" name="tlfnr"><br><br>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form1-container">
+					<div id="form-form">
+						<p th:text="${mad1.getNavn()}"></p>
+						<p th:text="${mad2.toString()}"></p>
+						<p th:text="${mad3.toString()}"></p>
+						<p th:text="${mad4.toString()}"></p>
+						<p th:text="${mad5.toString()}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
