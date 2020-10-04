@@ -54,7 +54,7 @@ public class MadvarerController {
         madvareArrayList.set(3, madvareArrayList.get(2));
         madvareArrayList.set(2, madvareArrayList.get(1));
         madvareArrayList.set(1, madvareArrayList.get(0));
-        madvareArrayList.set(0, new Madvare(madvare, "Varen udloeber: " + udloeb, "Pris: " +  pris, tlfnr));
+        madvareArrayList.set(0, new Madvare(madvare, "Varen udloeber: " + udloeb, "Pris: " +  pris, "Telefonnummer: "+tlfnr));
 
         return "redirect:/madvarer";
     }

@@ -41,6 +41,15 @@ a.lia:hover {
     text-decoration: none;
     color: white;
 }
+
+a.laes-mere:visited,a.laes-mere:link,a.laes-mere:active{
+    text-decoration: none;
+    color: black;
+}
+a.laes-mere:hover{
+    color: black;
+    font-weight: bold;
+}
 .listeafmad{
     margin-bottom: 10px;
     padding: 30px;
