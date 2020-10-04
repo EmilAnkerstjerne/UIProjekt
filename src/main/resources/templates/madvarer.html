@@ -6,15 +6,66 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <script>
-	function kontaktInfo(){
-		window.alert("kommer nok ikke til at virke");
+	var x = 1;
+	var y = 1;
+	var z = 1;
+	var i = 1;
+	var u = 1;
+	function knap1(){
+		if(x===1) {
+			window.alert("Din vare er reserveret. Du har 30 minutter til at kontakte saelgeren.");
+			x = 2;
+		}
+		else{
+			window.alert("Allerede reserveret");
+			}
 	}
+	function knap2(){
+		if(y===1) {
+			window.alert("Din vare er reserveret. Du har 30 minutter til at kontakte saelgeren.");
+			y = 2;
+		}
+		else{
+			window.alert("Allerede reserveret");
+		}
+	}
+	function knap3(){
+		if(z===1) {
+			window.alert("Din vare er reserveret. Du har 30 minutter til at kontakte saelgeren.");
+			z = 2;
+		}
+		else{
+			window.alert("Allerede reserveret");
+		}
+	}
+	function knap4(){
+		if(i===1) {
+			window.alert("Din vare er reserveret. Du har 30 minutter til at kontakte saelgeren.");
+			i = 2;
+		}
+		else{
+			window.alert("Allerede reserveret");
+		}
+	}
+	function knap5(){
+		if(u===1) {
+			window.alert("Din vare er reserveret. Du har 30 minutter til at kontakte saelgeren.");
+			u = 2;
+		}
+		else{
+			window.alert("Allerede reserveret");
+		}
+	}
+
+
+
 </script>
 <body>
 <ul class="navbarUL">
 	<li class="liele" style="border-right: 2px solid darkgray"><a class="href-uden-aendring" id="brand" href="/"><span style="font-size:150%">Stop Madspild Nu</span></a></li>
 	<li class="liele"><a class="href-uden-aendring lia" href="/">Startside</a></li>
 	<li class="liele" style="background-color: #111"><a class="href-uden-aendring lia" href="/madvarer">Madvarer</a></li>
+	<li class="liele" style="background-color: #111"><a class="href-uden-aendring lia" href="/madvarer">Opret madvare annonce</a></li>
 	<li class="liele"><a class="href-uden-aendring lia" href="/om">Om os</a></li>
 
 </ul>
@@ -31,8 +82,8 @@
 		</div>
 		<div class="col">
 			<h5>Køb mad:</h5>
-			<p>Du kan rulle igennem annoncerne nedenfor, derefter klikke på 'kontakt' ved den annonce du gerne vil købe mad fra.</p>
-			<p>Du vil få et telefon nummer på personen der har lagt annoncen op.</p>
+			<p>Du kan rulle igennem annoncerne nedenfor. Du kan klikke på 'Reservér' ved en annonce du gerne vil købe mad fra.</p>
+			<p>Du vil derefter få 30 minutter til at kontakte personen der har lagt annoncen op. Hvis ikke du køber varen inden 30 minutter, fjernes reservationen så en ny køber kan findes, og der ikke går mad til spilde!</p>
 		</div>
 	</div>
 </div>
@@ -42,9 +93,9 @@
 			<div class="col col-border">
 				<div class="form1-container" style="background-color:#FAF8EE">
 					<form id="registration-form" action="/postMadvare" method="post">
-						<label for="madvare">Madvare: </label><br>
+						<label for="madvare">Madvare(r)/ret: </label><br>
 						<input type="text" id="madvare" name="madvare"><br><br>
-						<label for="udloeb">Hvornaar udloeber varen: </label><br>
+						<label for="udloeb">Hvornaar udloeber varen/retten: </label><br>
 						<input type="text" id="udloeb" name="udloeb"><br><br>
 						<label for="pris">Pris: </label><br>
 						<input type="text" id="pris" name="pris"><br><br>
@@ -62,7 +113,7 @@
 							<p th:text="${mad1.getNavn()}" class="madnavn"></p>
 							<p th:text="${mad1.getUdloeb()}"></p>
 							<p th:text="${mad1.getPris()}"></p>
-							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+							<input type="button" value="Reservér" onclick="knap1()" class="button-kontakt-info">
 						</div>
 
 						<!-- POST 2 -->
@@ -70,7 +121,7 @@
 							<p th:text="${mad2.getNavn()}" class="madnavn"></p>
 							<p th:text="${mad2.getUdloeb()}"></p>
 							<p th:text="${mad2.getPris()}"></p>
-							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+							<input type="button" value="Reservér" onclick="knap2()" class="button-kontakt-info">
 						</div>
 
 						<!-- POST 3 -->
@@ -78,7 +129,7 @@
 							<p th:text="${mad3.getNavn()}" class="madnavn"></p>
 							<p th:text="${mad3.getUdloeb()}"></p>
 							<p th:text="${mad3.getPris()}"></p>
-							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+							<input type="button" value="Reservér" onclick="knap3()" class="button-kontakt-info">
 						</div>
 
 						<!-- POST 4 -->
@@ -86,7 +137,7 @@
 							<p th:text="${mad4.getNavn()}" class="madnavn"></p>
 							<p th:text="${mad4.getUdloeb()}"></p>
 							<p th:text="${mad4.getPris()}"></p>
-							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+							<input type="button" value="Reservér" onclick="knap4()" class="button-kontakt-info">
 						</div>
 
 						<!-- POST 5 -->
@@ -94,7 +145,7 @@
 							<p th:text="${mad5.getNavn()}" class="madnavn"></p>
 							<p th:text="${mad5.getUdloeb()}"></p>
 							<p th:text="${mad5.getPris()}"></p>
-							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+							<input type="button" value="Reservér" onclick="knap5()" class="button-kontakt-info">
 						</div>
 
 					</div>

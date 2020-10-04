@@ -47,7 +47,7 @@ a.lia:hover {
     border:solid;
     border: 1px solid;
     height: auto;
-    background-color:#FAF8EE
+    background-color:#FAF8EE;
 }
 .form1-container{
     margin-top: 20px;
@@ -77,6 +77,7 @@ a.lia:hover {
     padding-left: 0;
     margin-right: 15px;
     margin-left: 15px;
+    background-color:#FAF8EE;
 }
 .info-box{
     margin-bottom: 0;

@@ -34,11 +34,11 @@ public class MadvarerController {
         for(int i=0; i<5; i++){
             madvareArrayList.add(new Madvare("", "", "", ""));
         }
-        madvarerModel.addAttribute("mad1", madvareArrayList.get(0));
-        madvarerModel.addAttribute("mad2", madvareArrayList.get(1));
+        madvarerModel.addAttribute("mad1", madvareArrayList.get(4));
+        madvarerModel.addAttribute("mad2", madvareArrayList.get(3));
         madvarerModel.addAttribute("mad3", madvareArrayList.get(2));
-        madvarerModel.addAttribute("mad4", madvareArrayList.get(3));
-        madvarerModel.addAttribute("mad5", madvareArrayList.get(4));
+        madvarerModel.addAttribute("mad4", madvareArrayList.get(1));
+        madvarerModel.addAttribute("mad5", madvareArrayList.get(0));
 
         return "madvarer";
     }
