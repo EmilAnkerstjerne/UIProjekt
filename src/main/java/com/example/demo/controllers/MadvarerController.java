@@ -14,10 +14,19 @@ public class MadvarerController {
     ArrayList<Madvare> madvareArrayList = new ArrayList<>();
 
 
+    @GetMapping("/index")
+    public String indexHTML(){
+        return "index";
+    }
 
     @GetMapping("/")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/om")
+    public String about(){
+        return "about";
     }
 
     @GetMapping("/madvarer")
@@ -45,7 +54,7 @@ public class MadvarerController {
         madvareArrayList.set(3, madvareArrayList.get(2));
         madvareArrayList.set(2, madvareArrayList.get(1));
         madvareArrayList.set(1, madvareArrayList.get(0));
-        madvareArrayList.set(0, new Madvare(madvare, "Udloeber: " + udloeb, "Pris: " +  pris, tlfnr));
+        madvareArrayList.set(0, new Madvare(madvare, "Varen udloeber: " + udloeb, "Pris: " +  pris, tlfnr));
 
         return "redirect:/madvarer";
     }

@@ -1,23 +1,54 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>TWEETER</title>
+	<title>Madvarer</title>
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body class="blue-background">
+<script>
+	function kontaktInfo(){
+		window.alert("kommer nok ikke til at virke");
+	}
+</script>
+<body>
+<ul class="navbarUL">
+	<li class="liele" style="border-right: 2px solid darkgray"><a class="href-uden-aendring" id="brand" href="/"><span style="font-size:150%">Stop Madspild Nu</span></a></li>
+	<li class="liele"><a class="href-uden-aendring lia" href="/">Startside</a></li>
+	<li class="liele" style="background-color: #111"><a class="href-uden-aendring lia" href="/madvarer">Madvarer</a></li>
+	<li class="liele"><a class="href-uden-aendring lia" href="/om">Om os</a></li>
+
+</ul>
+<div class="container">
+<div style="padding-top:20px;">
+	<h2 style="">Hjælp med at forhindre madspild!</h2><br>
+	<p>Ved at benytte vores hjemmeside, kan du aktivt hjælpe med at stoppe madspild. Find og køb mad som skulle smides ud alligevel eller slå mad op du selv ville have smidt ud.</p>
+</div>
+	<div class="row">
+		<div class="col col-border">
+			<h5>Slå selv mad op:</h5>
+			<p>Du skal blot udfylde formen nedenfor, og derefter klik 'submit'.</p>
+			<p>Så er din annonce synlig for alle vores andre brugere!</p>
+		</div>
+		<div class="col">
+			<h5>Køb mad:</h5>
+			<p>Du kan rulle igennem annoncerne nedenfor, derefter klikke på 'kontakt' ved den annonce du gerne vil købe mad fra.</p>
+			<p>Du vil få et telefon nummer på personen der har lagt annoncen op.</p>
+		</div>
+	</div>
+</div>
+<hr>
 	<div class="container">
 		<div class="row">
 			<div class="col col-border">
-				<div class="form1-container">
+				<div class="form1-container" style="background-color:#FAF8EE">
 					<form id="registration-form" action="/postMadvare" method="post">
-						<label for="madvare">Madvare: </label>
+						<label for="madvare">Madvare: </label><br>
 						<input type="text" id="madvare" name="madvare"><br><br>
-						<label for="udloeb">Udloeb: </label>
+						<label for="udloeb">Hvornaar udloeber varen: </label><br>
 						<input type="text" id="udloeb" name="udloeb"><br><br>
-						<label for="pris">Pris: </label>
+						<label for="pris">Pris: </label><br>
 						<input type="text" id="pris" name="pris"><br><br>
-						<label for="tlfnr">Tlf.nr</label>
+						<label for="tlfnr">Tlf.nr: </label><br>
 						<input type="text" id="tlfnr" name="tlfnr"><br><br>
 						<input type="submit" value="Submit">
 					</form>
@@ -26,14 +57,54 @@
 			<div class="col">
 				<div class="form1-container">
 					<div id="form-form">
-						<p th:text="${mad1.getNavn()}"></p>
-						<p th:text="${mad2.toString()}"></p>
-						<p th:text="${mad3.toString()}"></p>
-						<p th:text="${mad4.toString()}"></p>
-						<p th:text="${mad5.toString()}"></p>
+						<!-- POST 1 -->
+						<div class="listeafmad">
+							<p th:text="${mad1.getNavn()}" class="madnavn"></p>
+							<p th:text="${mad1.getUdloeb()}"></p>
+							<p th:text="${mad1.getPris()}"></p>
+							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+						</div>
+
+						<!-- POST 2 -->
+						<div class="listeafmad">
+							<p th:text="${mad2.getNavn()}" class="madnavn"></p>
+							<p th:text="${mad2.getUdloeb()}"></p>
+							<p th:text="${mad2.getPris()}"></p>
+							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+						</div>
+
+						<!-- POST 3 -->
+						<div class="listeafmad">
+							<p th:text="${mad3.getNavn()}" class="madnavn"></p>
+							<p th:text="${mad3.getUdloeb()}"></p>
+							<p th:text="${mad3.getPris()}"></p>
+							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+						</div>
+
+						<!-- POST 4 -->
+						<div class="listeafmad">
+							<p th:text="${mad4.getNavn()}" class="madnavn"></p>
+							<p th:text="${mad4.getUdloeb()}"></p>
+							<p th:text="${mad4.getPris()}"></p>
+							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+						</div>
+
+						<!-- POST 5 -->
+						<div class="listeafmad">
+							<p th:text="${mad5.getNavn()}" class="madnavn"></p>
+							<p th:text="${mad5.getUdloeb()}"></p>
+							<p th:text="${mad5.getPris()}"></p>
+							<input type="button" value="Kontakt info" onclick="kontaktInfo()" class="button-kontakt-info">
+						</div>
+
 					</div>
 				</div>
 			</div>
+		</div>
+		<div style="margin-top:50px;">
+			<hr>
+			<h5 style="text-align: center">Kontakt os</h5>
+			<h6 style="text-align: center">Email: <a href="" style="color: blue;">Support@SMN.dk</a></h6>
 		</div>
 	</div>
 </body>

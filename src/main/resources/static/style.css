@@ -1,0 +1,83 @@
+.navbarUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+#brand{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 9px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.liele {
+    float: left;
+}
+.lia {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a.lia:hover {
+    background-color: #111;
+}
+#registration-form{
+    padding: 30px;
+    border:solid;
+    border: 1px solid;
+    height: auto;
+}
+.madnavn{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.href-uden-aendring:visited,a.href-uden-aendring:link,a.href-uden-aendring:active,a.href-uden-aendring:hover{
+    text-decoration: none;
+    color: white;
+}
+.listeafmad{
+    margin-bottom: 10px;
+    padding: 30px;
+    border:solid;
+    border: 1px solid;
+    height: auto;
+    background-color:#FAF8EE
+}
+.form1-container{
+    margin-top: 20px;
+}
+.button-kontakt-info{
+    margin-left: 74%;
+
+}
+.news-div{
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+.about-div{
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top:20px;
+}
+.navne{
+    border:solid;
+    border: 1px solid;
+    padding-top:10px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.info-box{
+    margin-bottom: 0;
+}
